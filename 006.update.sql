@@ -14,11 +14,11 @@ db.stus.update(
     }
 )
 
--- 删除
+-- 删除:设置name  age为空
 db.stus.update(
     {"_id":ObjectId("5edb4595ce5d733096ad4cdb")},
     {
-        $set:{
+        $unset:{
             "age":"2000",
             "name":"name"
         }
